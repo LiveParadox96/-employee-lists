@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import ExpandingWindow from "../../ExpandingWindow/ExpandingWindow";
 import ApplicationBasis from "../ApplicationBasis/ApplicationBasis";
 import Modal from "../Modal/Modal";
 

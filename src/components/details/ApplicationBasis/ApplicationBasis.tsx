@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import ExpandingWindow from "../../ExpandingWindow/ExpandingWindow";
-import { VscError as Basket } from "react-icons/vsc";
 import Button from "../UI/Button";
 import Modal from "../Modal/Modal";
 
@@ -30,15 +28,9 @@ function ApplicationBasis() {
     <div>
       <div className="add_pers">
         <div>
-          {!toggle && 
-          <Modal 
-          onChange={handleChange} 
-          onClick={click} />}
+          {!toggle && <Modal onChange={handleChange} onClick={click} />}
         </div>
-        <div className="persons">
-          {result}
-          {/*amendments are needed*/}
-        </div>
+        <div className="persons">{result}</div>
       </div>
     </div>
   );

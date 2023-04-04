@@ -1,31 +1,27 @@
 import React, { useState } from "react";
-// import ExpandingWindow from "../../ExpandingWindow/ExpandingWindow";
 import ApplicationBasis from "../ApplicationBasis/ApplicationBasis";
 import Modal from "../Modal/Modal";
 
 function ListOfDetectives() {
-  const [show,setShow] = useState(false)
+  const [show, setShow] = useState(false);
   const [showWindow, setShowWindow] = useState(false);
-  const handleChange = (event:any) => setValue(event.target.value);
+  const handleChange = (event: any) => setValue(event.target.value);
   const [arr, setArr] = useState([""]);
   const click = () => setArr([...arr, value]);
   const [value, setValue] = useState("");
-  
-return(
-  <>
-    <div onClick={() => setShow(!show)}>
-      <p className="classification" onClick={()=>setShowWindow(showWindow)}>
-        Список детективов
-      </p>
-    </div>
-    {show&&(<ApplicationBasis/> )}
-    {showWindow && (
-    <Modal
-    onChange={handleChange}
-    onClick={click}
-    value={value}/>
-    )}
-  </>
+
+  return (
+    <>
+      <div onClick={() => setShow(!show)}>
+        <p className="classification" onClick={() => setShowWindow(showWindow)}>
+          Список детективов
+        </p>
+      </div>
+      {show && <ApplicationBasis />}
+      {showWindow && (
+        <Modal onChange={handleChange} onClick={click} value={value} />
+      )}
+    </>
   );
 }
 

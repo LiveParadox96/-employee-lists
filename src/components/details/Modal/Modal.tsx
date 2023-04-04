@@ -23,7 +23,7 @@ const Modal = (props: any) => {
       </button>
       <ModalWindow
         isVisible={isModal}
-        title="Введите имя главного персонажа"
+        title="Введите имя персонажа"
         content={
           <div className="add_head_person">
             <input
