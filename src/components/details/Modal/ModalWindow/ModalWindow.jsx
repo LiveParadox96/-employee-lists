@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './../Modal.css'
 const ModalWindow = ({ isVisible = false, title, content, footer, onClose }) => {
     const keydownHandler = ({ key }) => {
@@ -10,10 +10,10 @@ const ModalWindow = ({ isVisible = false, title, content, footer, onClose }) => 
       }
     };
   
-    React.useEffect(() => {
+    useEffect(() => {
       document.addEventListener('keydown', keydownHandler);
       return () => document.removeEventListener('keydown', keydownHandler);
-    });
+    },[]);
   
     return !isVisible ? null : (
       <div className="modal" onClick={onClose}>

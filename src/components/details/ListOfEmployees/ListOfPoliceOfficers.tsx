@@ -1,6 +1,7 @@
 import { useState } from "react";
-import ExpandingWindow from "../../ExpandingWindow/ExpandingWindow";
+// import ExpandingWindow from "../../ExpandingWindow/ExpandingWindow";
 import ApplicationBasis from "../ApplicationBasis/ApplicationBasis";
+import Modal from "../Modal/Modal";
 
 function ListOfPoliceOfficers(){
   const [show,setShow] = useState(false)
@@ -19,7 +20,7 @@ return(
     </div>
     {show&&(<ApplicationBasis/> )}
     {showWindow && (
-    <ExpandingWindow
+    <Modal
     onChange={handleChange}
     onClick={click}
     value={value}/>

@@ -62,7 +62,19 @@
   .modal-content {
     padding: 1rem;
   }
-  
+
+  .add_head_person{
+    display: flex;
+    align-items: center;
+  }
+
+  .input_name{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+
   @keyframes appear {
     from {
       opacity: 0;

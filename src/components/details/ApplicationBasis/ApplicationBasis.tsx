@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ExpandingWindow from "../../ExpandingWindow/ExpandingWindow";
+// import ExpandingWindow from "../../ExpandingWindow/ExpandingWindow";
 import { VscError as Basket } from "react-icons/vsc";
 import Button from "../UI/Button";
 import Modal from "../Modal/Modal";
@@ -29,17 +29,11 @@ function ApplicationBasis() {
   return (
     <div>
       <div className="add_pers">
-        <div className="btn_window" onClick={() => setToggle(!toggle)}>
-          {!toggle ? "Создать нового" : "Свернуть"}
-        </div>
-        <div className="person">
-          {toggle && (
-            <ExpandingWindow
-              onChange={handleChange}
-              onClick={click}
-              value={value}
-            />
-          )}
+        <div>
+          {!toggle && 
+          <Modal 
+          onChange={handleChange} 
+          onClick={click} />}
         </div>
         <div className="persons">
           {result}

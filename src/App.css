@@ -19,13 +19,6 @@ body{
   margin: 0 auto;
 }
 
-.person{
-  width: initial;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
 
 .classification{
   display: flex;
@@ -45,14 +38,31 @@ body{
 .add_pers{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: max-content;
 }
 
-.btn_window{
+
+.secondary_characters{
   height: 30px;
-  width: 200px;
+  width: auto;
   font-size: 20px;
+  background-color: green;
+  border: 3px solid;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  max-width: -webkit-fill-available;
+}
+
+.head_pers{
+  height: 30px;
+  width: -webkit-fill-available;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: oblique;
   background-color: green;
   border: 3px solid;
   margin: 10px;
@@ -86,5 +96,5 @@ body{
 }
 
 .persons{
-  margin: 10px 0;
+  margin: 10px auto;
 }
