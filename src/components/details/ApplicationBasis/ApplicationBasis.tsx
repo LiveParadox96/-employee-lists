@@ -13,6 +13,7 @@ function ApplicationBasis() {
   const click = () => setArr([...arr, value]);
 
   const result = arr.map((element, index) => {
+    if (!element) return null;
     return (
       <div className="action_flex" key={index}>
         <span className="list_person">{element}</span>
